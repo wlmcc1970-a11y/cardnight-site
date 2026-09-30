@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.digirunestudios.cardnight",
+      "sha256_cert_fingerprints": [
+        "05:A5:3A:7F:48:8A:6B:85:8B:54:25:7E:11:EE:73:8C:52:92:51:49:84:83:FC:57:C1:6A:D5:86:D3:5C:EF:05",
+        "E2:9F:BB:EE:20:3D:16:73:A3:6A:49:90:E4:2F:F1:FA:12:38:B2:26:ED:07:A4:F4:EA:72:28:0E:B6:41:91:7B"
+      ]
+    }
+  }
+]
