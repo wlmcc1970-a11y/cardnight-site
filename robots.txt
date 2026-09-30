@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cardnight.digirunestudios.com/sitemap.xml
