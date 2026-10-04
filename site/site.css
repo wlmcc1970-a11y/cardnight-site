@@ -50,6 +50,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--mustard); outli
 .badge .gp img { position: absolute; left: -11.71px; top: -11.71px; width: 184.57px; height: 71.43px; max-width: none; }
 /* QR codes only where a phone is not the device in hand: wide screens with a mouse (same rule as DigiRuneStudios.com) */
 .qr-row { display: none; }
+/* pre-launch line, in place of the store badges (same treatment as Stitch Scroll) */
+.soon { font: 700 19px/1.35 var(--serif); margin: 18px auto 0; max-width: 22em; text-align: center; text-wrap: balance; }
+.hero .soon, .cta .soon { color: var(--on-felt); }
 @media (min-width: 1100px) and (hover: hover) {
   .qr-row { display: flex; justify-content: center; gap: 28px; margin: 18px 0 0; }
   .qr-row figure { margin: 0; text-align: center; }
@@ -142,6 +145,12 @@ footer .tm { font-size: 13.5px; opacity: .92; }
 }
 .row .btn { max-width: 100%; }
 .sheet .btn { font-size: 15.5px; padding: 10px 8px; }
+
+/* Balanced text (DigiRune premier brand standard): headings and captions are balanced; body text never ends on a lone word. */
+h1, h2, h3, figcaption, .tag, .soon, .crumbs { text-wrap: balance; }
+p, li, dd, dt { text-wrap: pretty; }
+/* Centered lines are balanced so each line of a centered block is about the same length. */
+.intro, .lead, .game p, .feats li, .gallery figcaption, .sheet h3, .panel p, footer p, .demo figcaption, .sheetlink, .phead .intro { text-wrap: balance; }
 @font-face {
   font-family: 'Fredoka';
   font-style: normal;
