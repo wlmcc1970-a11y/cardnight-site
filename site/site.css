@@ -174,6 +174,24 @@ p, li, dd, dt { text-wrap: pretty; }
   .h3, h2.h3 { font-size: 22.5px; }
   .crumbs { font-size: 13.5px; }
 }
+/* Phones (fresh-eyes round 2): the three price pills stay on one row ("Pay once" never drops to a line alone). */
+@media (max-width: 559px) {
+  .pills { gap: clamp(6px, 1.8vw, 10px); flex-wrap: nowrap; }
+  .pills li { font-size: clamp(13px, 3.9vw, 17px); padding: 5px clamp(8px, 2.6vw, 16px); white-space: nowrap; }
+}
+/* Phones: the score sheet button reads "Free PDF" on one line (its full name stays in the accessible label). */
+.sheet .btn .dl-short { display: none; }
+@media (max-width: 519px) {
+  .sheet .btn .dl-long { display: none; }
+  .sheet .btn .dl-short { display: inline; }
+  .sheet .btn::before { content: ""; width: 14px; height: 14px; flex: none; background: currentColor;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v12m-5-5 5 5 5-5M5 20h14'/%3E%3C/svg%3E") center / contain no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v12m-5-5 5 5 5-5M5 20h14'/%3E%3C/svg%3E") center / contain no-repeat; }
+}
+@media (max-width: 519px) {
+  .sheet h3 a { text-decoration: none; }
+  .sheet h3 .nm { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+}
 @font-face {
   font-family: 'Fredoka';
   font-style: normal;
