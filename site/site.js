@@ -1,10 +1,12 @@
 /* Card Night site: the demo video. Store links are written into the page at build time (store-links.json), so no script
    is needed for them. The video autoplays muted and loops. If the browser blocks autoplay, or the visitor prefers reduced
-   motion, it waits on its poster with a big play button. A pause button is always there. No tracking. DigiRune Studios. */
+   motion, it waits on its poster with a big play button. A pause button is always there, under the video beside its caption (2026-10-04: moved off the app screen). No tracking. DigiRune Studios. */
 (function () {
   var v = document.getElementById('demo');
   if (!v) return;
-  var btn = v.parentNode.querySelector('.demo-toggle');
+  var fig = v.closest ? v.closest('figure') : null;
+  var btn = (fig || v.parentNode).querySelector('.demo-toggle');
+  if (!btn) return;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   v.removeAttribute('controls'); // the page's own play and pause button takes over once the script runs
   v.muted = true; v.defaultMuted = true; v.setAttribute('muted', ''); v.playsInline = true;
