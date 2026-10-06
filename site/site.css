@@ -192,6 +192,12 @@ p, li, dd, dt { text-wrap: pretty; }
   .sheet h3 a { text-decoration: none; }
   .sheet h3 .nm { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
 }
+/* Nine score sheets (Modern American Canasta added 2026-10-06): 3 by 3 on wide screens; with 2 columns the last
+   sheet sits centered instead of alone at the left. */
+@media (min-width: 960px) { .sheets { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 959px) { .sheets > :last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc(50% - 6px); } }
+/* A long game name (Modern American Canasta) may wrap between words on a phone instead of running past its card. */
+.sheet h3 .nm.long { white-space: normal; text-wrap: balance; }
 @font-face {
   font-family: 'Fredoka';
   font-style: normal;
