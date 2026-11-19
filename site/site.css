@@ -227,3 +227,8 @@ p, li, dd, dt { text-wrap: pretty; }
 #iplist-check { margin-top: 10px; display: flex; justify-content: center; }
 .iplist-msg { min-height: 1.4em; font-size: 14.5px; margin: 8px 0 0; }
 .vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Story film section (2026-11-19, same pattern as the Road Pins site) */
+.filmbox { margin: 18px auto 0; max-width: 340px; }
+.filmbox video { display: block; width: 100%; height: auto; border-radius: 22px; background: #0a3633; box-shadow: 0 10px 28px rgba(0,0,0,.25); }
+.filmbox figcaption { font-size: 14px; color: var(--ink-2); text-align: center; margin-top: 10px; }
